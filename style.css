@@ -112,37 +112,37 @@ h6 {
 }
 
 /* Aplicar a todas secoes responsivas */
-.responsive-section, .profile-section, .projects-section, .mastfooter {
+.responsive-section, .profile-section, .projects-section, .experience-section, .mastfooter {
   width: 100%;
   margin: 0 auto;
 }
 
 @media (min-width: 576px) {
-  .responsive-section, .profile-section, .projects-section, .mastfooter {
+  .responsive-section, .profile-section, .projects-section, .experience-section, .mastfooter {
     width: 540px;
   }
 }
 
 @media (min-width: 768px) {
-  .responsive-section, .profile-section, .projects-section, .mastfooter {
+  .responsive-section, .profile-section, .projects-section, .experience-section, .mastfooter {
     width: 540px;
   }
 }
 
 @media (min-width: 992px) {
-  .responsive-section, .profile-section, .projects-section, .mastfooter {
+  .responsive-section, .profile-section, .projects-section, .experience-section, .mastfooter {
     width: 720px;
   }
 }
 
 @media (min-width: 1200px) {
-  .responsive-section, .profile-section, .projects-section, .mastfooter {
+  .responsive-section, .profile-section, .projects-section, .experience-section, .mastfooter {
     width: 960px;
   }
 }
 
 @media (min-width: 1400px) {
-  .responsive-section, .profile-section, .projects-section, .mastfooter {
+  .responsive-section, .profile-section, .projects-section, .experience-section, .mastfooter {
     width: 1140px;
   }
 }
@@ -260,6 +260,65 @@ h6 {
   color: #1f2d3d;
 }
 
+/* Secao de experiencia */
+.experience-section {
+  margin-top: 4rem;
+}
+
+.experience-section header {
+  margin-bottom: 2rem;
+}
+
+.experience-section header h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1f2d3d;
+}
+
+.experience-section .experience-section__experience-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.experience-section .experience-section__experience-list .experience-section__experience-card {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.experience-section .experience-section__experience-list .experience-section__experience-card > img {
+  height: 130px;
+  border-radius: 4px;
+}
+
+.experience-section .experience-section__experience-list .experience-section__experience-card .experience-section__experience-card__side {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25rem;
+  justify-content: space-between;
+}
+
+.experience-section .experience-section__experience-list .experience-section__experience-card .experience-section__experience-card__side h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2d3d;
+}
+
+.experience-section .experience-section__experience-list .experience-section__experience-card .experience-section__experience-card__side p:first-of-type {
+  font-size: 1rem;
+}
+
+.experience-section .experience-section__experience-list .experience-section__experience-card .experience-section__experience-card__side p:last-of-type {
+  font-weight: 100;
+  font-size: 1.125rem;
+}
+
+.experience-section footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* footer */
 .mastfooter {
   display: flex;
   justify-content: space-between;
