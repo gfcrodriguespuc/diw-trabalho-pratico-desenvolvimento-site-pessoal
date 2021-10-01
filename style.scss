@@ -52,155 +52,154 @@ h6 {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
-}
 
-.top-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  column-gap: 0.5em;
-}
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    column-gap: 0.5em;
 
-.top-nav ul li {
-  cursor: pointer;
-}
+    li {
+      cursor: pointer;
 
-.top-nav ul li:not(:first-child)::before {
-  content: "|";
-  padding-right: 0.5rem;
-  cursor: default;
-}
+      &:not(:first-child)::before {
+        content: "|";
+        padding-right: 0.5rem;
+        cursor: default;
+      }
+    }
 
-.top-nav .input-container {
-  position: relative;
-}
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        /* https://ferie.medium.com/detect-a-touch-device-with-only-css-9f8e30fa1134 */
+        /* mouse, touch pad */
+        color: lightblue;
+      }
 
-.top-nav .input-container input {
-  background: url("images/magnify.svg") 0.5rem 50% no-repeat;
-  padding: 0.75rem 1rem 0.75rem 2.25rem;
-  border-radius: 8px;
-  border: thin solid rgb(78, 78, 78);
-  appearance: none;
-}
-
-.top-nav .input-container .delete-button {
-  position: absolute;
-  top: 50%;
-  right: 0.5rem;
-  transform: translateY(-50%);
-  background-color: transparent;
-  background-image: url("images/close-circle-outline.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border: none;
-  appearance: none;
-  height: 1rem;
-  width: 1rem;
-  cursor: pointer;
-}
-
-/* Resposivo Header e NavBar */
-
-/* https://ferie.medium.com/detect-a-touch-device-with-only-css-9f8e30fa1134 */
-/* mouse, touch pad */
-@media (hover: hover) and (pointer: fine) {
-  .top-nav ul li:hover {
-    color: lightblue;
+      &:hover::before {
+        color: #1f2d3d;
+      }
+    }
   }
 
-  .top-nav ul li:hover::before {
-    color: #1f2d3d;
+  .input-container {
+    position: relative;
+
+    input {
+      background: url("images/magnify.svg") 0.5rem 50% no-repeat;
+      padding: 0.75rem 1rem 0.75rem 2.25rem;
+      border-radius: 8px;
+      border: thin solid rgb(78, 78, 78);
+      appearance: none;
+    }
+
+    .delete-button {
+      position: absolute;
+      top: 50%;
+      right: 0.5rem;
+      transform: translateY(-50%);
+      background-color: transparent;
+      background-image: url("images/close-circle-outline.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border: none;
+      appearance: none;
+      height: 1rem;
+      width: 1rem;
+      cursor: pointer;
+    }
   }
 }
 
 /* Profile Section */
 
 .profile-section {
-  /* Mobile First - Extra small */
+  // Mobile First - Extra small
   width: 100%;
   margin: 0 auto;
   display: flex;
   column-gap: 2rem;
-}
 
-.profile-section .profile-section__profile-picture {
-  border-radius: 4px;
-  height: 60vh;
-  background: #ffffff;
-  border: 1px solid #1f2d3d80;
-  padding: 0.25rem;
-}
+  // Responsive Profile Section
 
-.profile-section .profile-section__side {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.profile-section .profile-section__profile-information h2 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.profile-section .profile-section__profile-information p {
-  line-height: 1.5em;
-  font-size: 1.25rem;
-}
-
-.profile-section .profile-section__social-networks-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #1f2d3d;
-  margin-bottom: 0.75rem;
-}
-
-.profile-section .profile-section__social-networks-images {
-  height: 30px;
-  display: flex;
-  column-gap: 1.5rem;
-}
-
-.profile-section .profile-section__social-networks-images a,
-.profile-section .profile-section__social-networks-images img {
-  height: 100%;
-  display: block;
-}
-
-/* Responsive Profile Section */
-
-/* Small */
-@media (min-width: 576px) {
-  .profile-section {
-    width: 540px;
+  // Small
+  @media (min-width: 576px) {
+    & {
+      width: 540px;
+    }
   }
-}
 
-/* Medium */
-@media (min-width: 768px) {
-  .profile-section {
-    width: 540px;
+  // Medium
+  @media (min-width: 768px) {
+    & {
+      width: 540px;
+    }
   }
-}
 
-/* Large */
-@media (min-width: 992px) {
-  .profile-section {
-    width: 720px;
+  // Large
+  @media (min-width: 992px) {
+    & {
+      width: 720px;
+    }
   }
-}
-/* X-Large */
-@media (min-width: 1200px) {
-  .profile-section {
-    width: 960px;
-  }
-}
 
-/* XX-Large */
-@media (min-width: 1400px) {
-  .profile-section {
-    width: 1140px;
+  // X-Large
+  @media (min-width: 1200px) {
+    & {
+      width: 960px;
+    }
+  }
+
+  // XX-Large
+  @media (min-width: 1400px) {
+    & {
+      width: 1140px;
+    }
+  }
+
+  .profile-section__profile-picture {
+    border-radius: 4px;
+    height: 60vh;
+    background: #ffffff;
+    border: 1px solid #1f2d3d80;
+    padding: 0.25rem;
+  }
+
+  .profile-section__side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .profile-section__profile-information h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .profile-section__profile-information p {
+      line-height: 1.5em;
+      font-size: 1.25rem;
+    }
+
+    .profile-section__social-networks-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1f2d3d;
+      margin-bottom: 0.75rem;
+    }
+
+    .profile-section__social-networks-images {
+      height: 30px;
+      display: flex;
+      column-gap: 1.5rem;
+
+      a,
+      img {
+        height: 100%;
+        display: block;
+      }
+    }
   }
 }

@@ -71,6 +71,17 @@ h6 {
   cursor: default;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .top-nav ul:hover {
+    /* https://ferie.medium.com/detect-a-touch-device-with-only-css-9f8e30fa1134 */
+    /* mouse, touch pad */
+    color: lightblue;
+  }
+  .top-nav ul:hover::before {
+    color: #1f2d3d;
+  }
+}
+
 .top-nav .input-container {
   position: relative;
 }
@@ -100,25 +111,42 @@ h6 {
   cursor: pointer;
 }
 
-/* Resposivo Header e NavBar */
-/* https://ferie.medium.com/detect-a-touch-device-with-only-css-9f8e30fa1134 */
-/* mouse, touch pad */
-@media (hover: hover) and (pointer: fine) {
-  .top-nav ul li:hover {
-    color: lightblue;
-  }
-  .top-nav ul li:hover::before {
-    color: #1f2d3d;
-  }
-}
-
 /* Profile Section */
 .profile-section {
-  /* Mobile First - Extra small */
   width: 100%;
   margin: 0 auto;
   display: flex;
   column-gap: 2rem;
+}
+
+@media (min-width: 576px) {
+  .profile-section {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .profile-section {
+    width: 540px;
+  }
+}
+
+@media (min-width: 992px) {
+  .profile-section {
+    width: 720px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .profile-section {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .profile-section {
+    width: 1140px;
+  }
 }
 
 .profile-section .profile-section__profile-picture {
@@ -135,69 +163,33 @@ h6 {
   justify-content: space-between;
 }
 
-.profile-section .profile-section__profile-information h2 {
+.profile-section .profile-section__side .profile-section__profile-information h2 {
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-.profile-section .profile-section__profile-information p {
+.profile-section .profile-section__side .profile-section__profile-information p {
   line-height: 1.5em;
   font-size: 1.25rem;
 }
 
-.profile-section .profile-section__social-networks-title {
+.profile-section .profile-section__side .profile-section__social-networks-title {
   font-size: 1.5rem;
   font-weight: 700;
   color: #1f2d3d;
   margin-bottom: 0.75rem;
 }
 
-.profile-section .profile-section__social-networks-images {
+.profile-section .profile-section__side .profile-section__social-networks-images {
   height: 30px;
   display: flex;
   column-gap: 1.5rem;
 }
 
-.profile-section .profile-section__social-networks-images a,
-.profile-section .profile-section__social-networks-images img {
+.profile-section .profile-section__side .profile-section__social-networks-images a,
+.profile-section .profile-section__side .profile-section__social-networks-images img {
   height: 100%;
   display: block;
-}
-
-/* Responsive Profile Section */
-/* Small */
-@media (min-width: 576px) {
-  .profile-section {
-    width: 540px;
-  }
-}
-
-/* Medium */
-@media (min-width: 768px) {
-  .profile-section {
-    width: 540px;
-  }
-}
-
-/* Large */
-@media (min-width: 992px) {
-  .profile-section {
-    width: 720px;
-  }
-}
-
-/* X-Large */
-@media (min-width: 1200px) {
-  .profile-section {
-    width: 960px;
-  }
-}
-
-/* XX-Large */
-@media (min-width: 1400px) {
-  .profile-section {
-    width: 1140px;
-  }
 }
 /*# sourceMappingURL=style.css.map */
