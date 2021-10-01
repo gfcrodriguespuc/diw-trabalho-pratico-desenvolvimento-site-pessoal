@@ -1,5 +1,5 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;900&display=swap");
+
 *,
 *:before,
 *:after {
@@ -44,6 +44,7 @@ h6 {
 }
 
 /* Header e Navbar */
+
 .top-nav {
   background: #c0c0c0;
   padding: 0.5rem 1rem;
@@ -79,7 +80,7 @@ h6 {
   background: url("images/magnify.svg") 0.5rem 50% no-repeat;
   padding: 0.75rem 1rem 0.75rem 2.25rem;
   border-radius: 8px;
-  border: thin solid #4e4e4e;
+  border: thin solid rgb(78, 78, 78);
   appearance: none;
 }
 
@@ -101,18 +102,21 @@ h6 {
 }
 
 /* Resposivo Header e NavBar */
+
 /* https://ferie.medium.com/detect-a-touch-device-with-only-css-9f8e30fa1134 */
 /* mouse, touch pad */
 @media (hover: hover) and (pointer: fine) {
   .top-nav ul li:hover {
     color: lightblue;
   }
+
   .top-nav ul li:hover::before {
     color: #1f2d3d;
   }
 }
 
 /* Profile Section */
+
 .profile-section {
   /* Mobile First - Extra small */
   width: 100%;
@@ -166,6 +170,7 @@ h6 {
 }
 
 /* Responsive Profile Section */
+
 /* Small */
 @media (min-width: 576px) {
   .profile-section {
@@ -186,7 +191,6 @@ h6 {
     width: 720px;
   }
 }
-
 /* X-Large */
 @media (min-width: 1200px) {
   .profile-section {
@@ -200,4 +204,3 @@ h6 {
     width: 1140px;
   }
 }
-/*# sourceMappingURL=style.css.map */
