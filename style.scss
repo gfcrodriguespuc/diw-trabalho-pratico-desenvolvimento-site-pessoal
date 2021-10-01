@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;900&display=swap");
 
+$black: #212427;
+$primary: #1f2d3d;
+$secondary: #607994;
+
 *,
 *:before,
 *:after {
@@ -45,7 +49,7 @@ h6 {
 
 /* Header e Navbar */
 
-.top-nav {
+.masthead nav {
   background: #c0c0c0;
   padding: 0.5rem 1rem;
   display: flex;
@@ -68,17 +72,17 @@ h6 {
         padding-right: 0.5rem;
         cursor: default;
       }
-    }
 
-    @media (hover: hover) and (pointer: fine) {
-      &:hover {
-        /* https://ferie.medium.com/detect-a-touch-device-with-only-css-9f8e30fa1134 */
-        /* mouse, touch pad */
-        color: lightblue;
-      }
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          /* https://ferie.medium.com/detect-a-touch-device-with-only-css-9f8e30fa1134 */
+          /* mouse, touch pad */
+          color: $secondary;
+        }
 
-      &:hover::before {
-        color: #1f2d3d;
+        &:hover::before {
+          color: #1f2d3d;
+        }
       }
     }
   }
@@ -113,16 +117,11 @@ h6 {
   }
 }
 
-/* Profile Section */
-
-.profile-section {
+/* Aplicar a todas secoes responsivas */
+.responsive-section {
   // Mobile First - Extra small
   width: 100%;
   margin: 0 auto;
-  display: flex;
-  column-gap: 2rem;
-
-  // Responsive Profile Section
 
   // Small
   @media (min-width: 576px) {
@@ -158,6 +157,14 @@ h6 {
       width: 1140px;
     }
   }
+}
+
+/* Profile Section */
+
+.profile-section {
+  @extend .responsive-section;
+  display: flex;
+  column-gap: 2rem;
 
   .profile-section__profile-picture {
     border-radius: 4px;
@@ -171,6 +178,7 @@ h6 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: $black;
 
     .profile-section__profile-information h2 {
       font-size: 1.75rem;
@@ -186,8 +194,8 @@ h6 {
     .profile-section__social-networks-title {
       font-size: 1.5rem;
       font-weight: 700;
-      color: #1f2d3d;
       margin-bottom: 0.75rem;
+      color: $primary;
     }
 
     .profile-section__social-networks-images {
@@ -201,5 +209,66 @@ h6 {
         display: block;
       }
     }
+  }
+}
+
+/* Seção de Projetos */
+.projects-section {
+  @extend .responsive-section;
+  margin-top: 4rem;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: $primary;
+    }
+
+    select {
+      padding: 0.75rem 2.25rem 0.75rem 1rem;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: $primary;
+      background-color: transparent;
+      background-image: url("images/chevron-down.svg");
+      background-position: right 0.5rem center;
+      background-repeat: no-repeat;
+      border: thin solid rgb(78, 78, 78);
+      border-radius: 8px;
+      appearance: none;
+
+      &:focus {
+        background-image: url("images/chevron-up.svg");
+      }
+
+      option {
+        color: $primary;
+        font-weight: 100;
+      }
+    }
+  }
+}
+
+.mastfooter {
+  @extend .responsive-section;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+  padding: 2rem 0rem;
+  border-top: thin solid white;
+  padding: 2rem 0rem;
+  font-size: 0.85rem;
+  font-weight: 100;
+
+  & > span:last-of-type {
+    border: thin solid $primary;
+    border-radius: 2px;
+    padding: 0.5rem;
   }
 }

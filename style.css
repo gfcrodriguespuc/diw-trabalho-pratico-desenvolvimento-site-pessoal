@@ -44,7 +44,7 @@ h6 {
 }
 
 /* Header e Navbar */
-.top-nav {
+.masthead nav {
   background: #c0c0c0;
   padding: 0.5rem 1rem;
   display: flex;
@@ -53,7 +53,7 @@ h6 {
   margin-bottom: 2rem;
 }
 
-.top-nav ul {
+.masthead nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -61,32 +61,32 @@ h6 {
   column-gap: 0.5em;
 }
 
-.top-nav ul li {
+.masthead nav ul li {
   cursor: pointer;
 }
 
-.top-nav ul li:not(:first-child)::before {
+.masthead nav ul li:not(:first-child)::before {
   content: "|";
   padding-right: 0.5rem;
   cursor: default;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .top-nav ul:hover {
+  .masthead nav ul li:hover {
     /* https://ferie.medium.com/detect-a-touch-device-with-only-css-9f8e30fa1134 */
     /* mouse, touch pad */
-    color: lightblue;
+    color: #607994;
   }
-  .top-nav ul:hover::before {
+  .masthead nav ul li:hover::before {
     color: #1f2d3d;
   }
 }
 
-.top-nav .input-container {
+.masthead nav .input-container {
   position: relative;
 }
 
-.top-nav .input-container input {
+.masthead nav .input-container input {
   background: url("images/magnify.svg") 0.5rem 50% no-repeat;
   padding: 0.75rem 1rem 0.75rem 2.25rem;
   border-radius: 8px;
@@ -94,7 +94,7 @@ h6 {
   appearance: none;
 }
 
-.top-nav .input-container .delete-button {
+.masthead nav .input-container .delete-button {
   position: absolute;
   top: 50%;
   right: 0.5rem;
@@ -111,42 +111,46 @@ h6 {
   cursor: pointer;
 }
 
-/* Profile Section */
-.profile-section {
+/* Aplicar a todas secoes responsivas */
+.responsive-section, .profile-section, .projects-section, .mastfooter {
   width: 100%;
   margin: 0 auto;
-  display: flex;
-  column-gap: 2rem;
 }
 
 @media (min-width: 576px) {
-  .profile-section {
+  .responsive-section, .profile-section, .projects-section, .mastfooter {
     width: 540px;
   }
 }
 
 @media (min-width: 768px) {
-  .profile-section {
+  .responsive-section, .profile-section, .projects-section, .mastfooter {
     width: 540px;
   }
 }
 
 @media (min-width: 992px) {
-  .profile-section {
+  .responsive-section, .profile-section, .projects-section, .mastfooter {
     width: 720px;
   }
 }
 
 @media (min-width: 1200px) {
-  .profile-section {
+  .responsive-section, .profile-section, .projects-section, .mastfooter {
     width: 960px;
   }
 }
 
 @media (min-width: 1400px) {
-  .profile-section {
+  .responsive-section, .profile-section, .projects-section, .mastfooter {
     width: 1140px;
   }
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  column-gap: 2rem;
 }
 
 .profile-section .profile-section__profile-picture {
@@ -161,6 +165,7 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color: #212427;
 }
 
 .profile-section .profile-section__side .profile-section__profile-information h2 {
@@ -177,8 +182,8 @@ h6 {
 .profile-section .profile-section__side .profile-section__social-networks-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1f2d3d;
   margin-bottom: 0.75rem;
+  color: #1f2d3d;
 }
 
 .profile-section .profile-section__side .profile-section__social-networks-images {
@@ -191,5 +196,63 @@ h6 {
 .profile-section .profile-section__side .profile-section__social-networks-images img {
   height: 100%;
   display: block;
+}
+
+/* Seção de Projetos */
+.projects-section {
+  margin-top: 4rem;
+}
+
+.projects-section header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.projects-section header h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1f2d3d;
+}
+
+.projects-section header select {
+  padding: 0.75rem 2.25rem 0.75rem 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #1f2d3d;
+  background-color: transparent;
+  background-image: url("images/chevron-down.svg");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  border: thin solid #4e4e4e;
+  border-radius: 8px;
+  appearance: none;
+}
+
+.projects-section header select:focus {
+  background-image: url("images/chevron-up.svg");
+}
+
+.projects-section header select option {
+  color: #1f2d3d;
+  font-weight: 100;
+}
+
+.mastfooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+  padding: 2rem 0rem;
+  border-top: thin solid white;
+  padding: 2rem 0rem;
+  font-size: 0.85rem;
+  font-weight: 100;
+}
+
+.mastfooter > span:last-of-type {
+  border: thin solid #1f2d3d;
+  border-radius: 2px;
+  padding: 0.5rem;
 }
 /*# sourceMappingURL=style.css.map */
