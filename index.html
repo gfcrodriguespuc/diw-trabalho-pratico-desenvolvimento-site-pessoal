@@ -10,59 +10,69 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <!-- Meu style -->
+    <!-- Nenhum framework externo apenas meu style e o nomalize para compatibilidade entre navegadores :) -->
+    <link rel="stylesheet" href="vendor/normalize.css" />
     <link rel="stylesheet" href="style.css" />
 
     <!-- Titulo da aba -->
     <title>Site Pessoal</title>
   </head>
 
-  <body class="bg-light">
-    <div class="bg-secondary mb-4">
-      <div class="container-xxl">
-        <h1 class="m-0">ola mundo</h1>
-      </div>
-    </div>
+  <body>
+    <header>
+      <nav class="top-nav">
+        <ul>
+          <!-- TODO: COlocar links com id das seções -->
+          <li>perfil</li>
+          <li>projetos</li>
+          <li>experiencia</li>
+          <li>repositórios github</li>
+          <li>conteúdo</li>
+        </ul>
 
-    <div class="container d-flex">
-      <img class="rounded" src="http://lorempixel.com/400/400" alt="" />
+        <span class="input-container">
+          <input type="text" placeholder="Pesquisar" />
+          <button class="delete-button"></button>
+        </span>
+      </nav>
+    </header>
 
-      <div class="d-flex flex-column justify-content-between">
-        <div class="ms-5">
-          <h2>Nome do perfil</h2>
-          <p>
-            Objetivos: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.
-          </p>
-        </div>
+    <main class="site-content">
+      <section class="profile-section">
+        <img
+          class="profile-section__profile-picture"
+          src="https://github.com/guilhermerodrigues680.png"
+          alt="Fotografia de Guilherme Rodrigues"
+        />
 
-        <div class="ms-5">
-          Redes Sociais
-          <div class="d-flex social-networks__images">
-            <img class="img-fluid" src="images/Facebook_icon_2013.svg" alt="" />
-            <img src="images/Twitter_bird_logo_2012.svg" alt="" />
-            <img src="images/instagram-seeklogo.com.svg" alt="" />
+        <div class="profile-section__side">
+          <div class="profile-section__profile-information">
+            <h2>Nome do Perfil</h2>
+            <p>
+              <b>Objetivos:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+
+          <div>
+            <h6 class="profile-section__social-networks-title">Redes sociais</h6>
+            <div class="profile-section__social-networks-images">
+              <a href="https://facebook.com" target="_blank">
+                <img src="images/facebook-logo.svg" alt="logo do facebook" />
+              </a>
+              <a href="https://twitter.com" target="_blank">
+                <img src="images/twitter-bird-logo.svg" alt="logo do twitter" />
+              </a>
+              <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram-logo.svg" alt="logo do instagram" />
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
 
-    <!-- Bootstrap Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Nenhuma biblioteca externa é necessária para o site funcionar :) -->
   </body>
 </html>
