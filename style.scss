@@ -220,7 +220,8 @@ h6 {
   header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
 
     h2 {
       font-size: 1.75rem;
@@ -248,6 +249,29 @@ h6 {
       option {
         color: $primary;
         font-weight: 100;
+      }
+    }
+  }
+
+  .projects-section__projects-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+    figure {
+      img {
+        display: block;
+        height: 180px;
+        border-radius: 4px;
+      }
+
+      figcaption {
+        margin-top: 0.25rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        color: $primary;
       }
     }
   }

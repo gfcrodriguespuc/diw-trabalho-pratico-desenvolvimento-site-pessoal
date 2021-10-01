@@ -206,7 +206,8 @@ h6 {
 .projects-section header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
 .projects-section header h2 {
@@ -236,6 +237,27 @@ h6 {
 .projects-section header select option {
   color: #1f2d3d;
   font-weight: 100;
+}
+
+.projects-section .projects-section__projects-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.projects-section .projects-section__projects-list figure img {
+  display: block;
+  height: 180px;
+  border-radius: 4px;
+}
+
+.projects-section .projects-section__projects-list figure figcaption {
+  margin-top: 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #1f2d3d;
 }
 
 .mastfooter {
