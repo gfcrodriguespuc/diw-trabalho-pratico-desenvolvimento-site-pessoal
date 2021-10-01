@@ -43,6 +43,40 @@ h6 {
   font-weight: inherit;
 }
 
+/* Botões */
+.btn {
+  appearance: none;
+  padding: 0.5rem 0.75rem;
+  background: #525252;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn--plus::before {
+  content: "";
+  display: block;
+  background-color: transparent;
+  background-image: url("images/plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 1.5rem;
+  width: 1.5rem;
+  color: white;
+  margin-right: 0.25rem;
+}
+
+/* Linhas */
+.hr {
+  border: none;
+  border-top: thin solid rgba(96, 121, 148, 0.25);
+}
+
 /* Header e Navbar */
 .masthead nav {
   background: #c0c0c0;
@@ -103,7 +137,7 @@ h6 {
   background-image: url("images/close-circle-outline.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   border: none;
   appearance: none;
   height: 1rem;
@@ -258,6 +292,11 @@ h6 {
   font-weight: 700;
   margin-bottom: 0.75rem;
   color: #1f2d3d;
+}
+
+.projects-section footer {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* Secao de experiencia */
