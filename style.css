@@ -164,37 +164,37 @@ h6 {
 }
 
 /* Aplicar a todas secoes responsivas */
-.responsive-section, .profile-section, .projects-section, .experience-section, .mastfooter {
+.responsive-section, .profile-section, .projects-section, .experience-section, .github-repositories-section, .mastfooter {
   width: 100%;
   margin: 0 auto;
 }
 
 @media (min-width: 576px) {
-  .responsive-section, .profile-section, .projects-section, .experience-section, .mastfooter {
+  .responsive-section, .profile-section, .projects-section, .experience-section, .github-repositories-section, .mastfooter {
     width: 540px;
   }
 }
 
 @media (min-width: 768px) {
-  .responsive-section, .profile-section, .projects-section, .experience-section, .mastfooter {
+  .responsive-section, .profile-section, .projects-section, .experience-section, .github-repositories-section, .mastfooter {
     width: 540px;
   }
 }
 
 @media (min-width: 992px) {
-  .responsive-section, .profile-section, .projects-section, .experience-section, .mastfooter {
+  .responsive-section, .profile-section, .projects-section, .experience-section, .github-repositories-section, .mastfooter {
     width: 720px;
   }
 }
 
 @media (min-width: 1200px) {
-  .responsive-section, .profile-section, .projects-section, .experience-section, .mastfooter {
+  .responsive-section, .profile-section, .projects-section, .experience-section, .github-repositories-section, .mastfooter {
     width: 960px;
   }
 }
 
 @media (min-width: 1400px) {
-  .responsive-section, .profile-section, .projects-section, .experience-section, .mastfooter {
+  .responsive-section, .profile-section, .projects-section, .experience-section, .github-repositories-section, .mastfooter {
     width: 1140px;
   }
 }
@@ -457,6 +457,85 @@ h6 {
 
 @media (min-width: 576px) {
   .experience-section footer {
+    justify-content: flex-end;
+  }
+}
+
+/* Secao de repositorios */
+.github-repositories-section {
+  margin-top: 4rem;
+  padding: 0rem 1rem;
+}
+
+@media (min-width: 992px) {
+  .github-repositories-section {
+    padding: 0rem;
+  }
+}
+
+.github-repositories-section header {
+  margin-bottom: 2rem;
+}
+
+.github-repositories-section header h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1f2d3d;
+}
+
+.github-repositories-section .github-repositories-section__repositories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem 0rem;
+}
+
+@media (min-width: 992px) {
+  .github-repositories-section .github-repositories-section__repositories-list {
+    flex-direction: row;
+    gap: 0rem 1rem;
+  }
+}
+
+.github-repositories-section .github-repositories-section__repositories-list .github-repositories-section__repository-card {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 1rem;
+}
+
+.github-repositories-section .github-repositories-section__repositories-list .github-repositories-section__repository-card .repository-card__image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: #c4c4c4;
+  border-radius: 50%;
+}
+
+.github-repositories-section .github-repositories-section__repositories-list .repository-card__text-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.github-repositories-section .github-repositories-section__repositories-list .repository-card__text-container h3 {
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: #1f2d3d;
+}
+
+.github-repositories-section .github-repositories-section__repositories-list .repository-card__text-container > p:last-child {
+  font-weight: 700;
+}
+
+.github-repositories-section footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+@media (min-width: 576px) {
+  .github-repositories-section footer {
     justify-content: flex-end;
   }
 }

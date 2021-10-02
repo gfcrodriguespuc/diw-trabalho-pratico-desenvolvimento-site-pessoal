@@ -469,6 +469,80 @@ h6 {
   }
 }
 
+/* Secao de repositorios */
+.github-repositories-section {
+  @extend .responsive-section;
+  margin-top: 4rem;
+  padding: 0rem 1rem;
+
+  @media (min-width: $screen-large) {
+    padding: 0rem;
+  }
+
+  header {
+    margin-bottom: 2rem;
+
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: $primary;
+    }
+  }
+
+  .github-repositories-section__repositories-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem 0rem;
+
+    @media (min-width: $screen-large) {
+      flex-direction: row;
+      gap: 0rem 1rem;
+    }
+
+    .github-repositories-section__repository-card {
+      display: flex;
+      align-items: flex-start;
+      column-gap: 1rem;
+
+      .repository-card__image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        background: #c4c4c4;
+        border-radius: 50%;
+      }
+    }
+
+    .repository-card__text-container {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.5rem;
+      margin-top: 0.75rem;
+
+      h3 {
+        font-size: 1.55rem;
+        font-weight: 600;
+        color: $primary;
+      }
+
+      & > p:last-child {
+        font-weight: 700;
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+
+    @media (min-width: $screen-small) {
+      justify-content: flex-end;
+    }
+  }
+}
+
 /* footer */
 .mastfooter {
   @extend .responsive-section;
