@@ -1,9 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;900&display=swap");
 
+// Cores
 $black: #212427;
 $primary: #1f2d3d;
 $secondary: #607994;
 $tertiary: #525252;
+
+// Breakpoints
+$screen-small: 576px;
+$screen-medium: 768px;
+$screen-large: 992px;
+$screen-xlarge: 1200px;
+$screen-xxlarge: 1400px;
 
 *,
 *:before,
@@ -90,44 +98,20 @@ h6 {
   background: #c0c0c0;
   padding: 0.5rem 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
 
   ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    column-gap: 0.5em;
-
-    li {
-      cursor: pointer;
-
-      &:not(:first-child)::before {
-        content: "|";
-        padding-right: 0.5rem;
-        cursor: default;
-      }
-
-      @media (hover: hover) and (pointer: fine) {
-        &:hover {
-          /* https://ferie.medium.com/detect-a-touch-device-with-only-css-9f8e30fa1134 */
-          /* mouse, touch pad */
-          color: $secondary;
-        }
-
-        &:hover::before {
-          color: #1f2d3d;
-        }
-      }
-    }
+    display: none;
   }
 
   .input-container {
     position: relative;
+    width: 100%;
 
     input {
+      width: 100%;
       background: url("images/magnify.svg") 0.5rem 50% no-repeat;
       padding: 0.75rem 1rem 0.75rem 2.25rem;
       border-radius: 8px;
@@ -152,6 +136,48 @@ h6 {
       cursor: pointer;
     }
   }
+
+  @media (min-width: $screen-large) {
+    justify-content: space-between;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      column-gap: 0.5em;
+
+      li {
+        cursor: pointer;
+
+        &:not(:first-child)::before {
+          content: "|";
+          padding-right: 0.5rem;
+          cursor: default;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            /* https://ferie.medium.com/detect-a-touch-device-with-only-css-9f8e30fa1134 */
+            /* mouse, touch pad */
+            color: $secondary;
+          }
+
+          &:hover::before {
+            color: #1f2d3d;
+          }
+        }
+      }
+    }
+
+    .input-container {
+      width: auto;
+
+      input {
+        width: auto;
+      }
+    }
+  }
 }
 
 /* Aplicar a todas secoes responsivas */
@@ -161,35 +187,35 @@ h6 {
   margin: 0 auto;
 
   // Small
-  @media (min-width: 576px) {
+  @media (min-width: $screen-small) {
     & {
       width: 540px;
     }
   }
 
   // Medium
-  @media (min-width: 768px) {
+  @media (min-width: $screen-medium) {
     & {
       width: 540px;
     }
   }
 
   // Large
-  @media (min-width: 992px) {
+  @media (min-width: $screen-large) {
     & {
       width: 720px;
     }
   }
 
   // X-Large
-  @media (min-width: 1200px) {
+  @media (min-width: $screen-xlarge) {
     & {
       width: 960px;
     }
   }
 
   // XX-Large
-  @media (min-width: 1400px) {
+  @media (min-width: $screen-xxlarge) {
     & {
       width: 1140px;
     }
@@ -201,11 +227,14 @@ h6 {
 .profile-section {
   @extend .responsive-section;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   column-gap: 2rem;
+  padding: 0rem 0.5rem;
 
   .profile-section__profile-picture {
     border-radius: 4px;
-    height: 60vh;
+    height: 30vh;
     background: #ffffff;
     border: 1px solid #1f2d3d80;
     padding: 0.25rem;
@@ -245,6 +274,15 @@ h6 {
         height: 100%;
         display: block;
       }
+    }
+  }
+
+  @media (min-width: $screen-large) {
+    flex-direction: row;
+    padding: 0rem;
+
+    .profile-section__profile-picture {
+      height: 60vh;
     }
   }
 }
