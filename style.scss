@@ -291,10 +291,16 @@ h6 {
 .projects-section {
   @extend .responsive-section;
   margin-top: 4rem;
+  padding: 0rem 1rem;
+
+  @media (min-width: $screen-large) {
+    padding: 0rem;
+  }
 
   header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    row-gap: 1rem;
     align-items: center;
     margin-bottom: 2rem;
 
@@ -326,19 +332,35 @@ h6 {
         font-weight: 100;
       }
     }
+
+    @media (min-width: $screen-small) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   .projects-section__projects-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 0.5rem;
     flex-wrap: wrap;
+
+    @media (min-width: $screen-small) {
+      justify-content: space-between;
+    }
 
     figure {
       img {
         display: block;
-        height: 180px;
+        height: auto;
+        width: 100%;
         border-radius: 4px;
+
+        @media (min-width: $screen-small) {
+          height: 180px;
+          width: auto;
+        }
       }
 
       figcaption {
@@ -347,13 +369,19 @@ h6 {
         font-weight: 700;
         margin-bottom: 0.75rem;
         color: $primary;
+        text-align: center;
       }
     }
   }
 
   footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    margin-top: 1rem;
+
+    @media (min-width: $screen-small) {
+      justify-content: flex-end;
+    }
   }
 }
 
@@ -361,6 +389,11 @@ h6 {
 .experience-section {
   @extend .responsive-section;
   margin-top: 4rem;
+  padding: 0rem 1rem;
+
+  @media (min-width: $screen-large) {
+    padding: 0rem;
+  }
 
   header {
     margin-bottom: 2rem;
@@ -379,11 +412,16 @@ h6 {
 
     .experience-section__experience-card {
       display: flex;
+      align-items: center;
       column-gap: 1rem;
 
       & > img {
-        height: 130px;
+        height: 100px;
         border-radius: 4px;
+
+        @media (min-width: $screen-small) {
+          height: 130px;
+        }
       }
 
       .experience-section__experience-card__side {
@@ -396,10 +434,20 @@ h6 {
           font-size: 1.25rem;
           font-weight: 700;
           color: $primary;
+          text-align: center;
+
+          @media (min-width: $screen-small) {
+            text-align: left;
+          }
         }
 
         p:first-of-type {
           font-size: 1rem;
+          text-align: justify;
+
+          @media (min-width: $screen-small) {
+            text-align: left;
+          }
         }
 
         p:last-of-type {
@@ -412,7 +460,12 @@ h6 {
 
   footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    margin-top: 1rem;
+
+    @media (min-width: $screen-small) {
+      justify-content: flex-end;
+    }
   }
 }
 
@@ -421,14 +474,25 @@ h6 {
   @extend .responsive-section;
 
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1rem;
   align-items: center;
   margin-top: 4rem;
   padding: 2rem 0rem;
   border-top: thin solid white;
-  padding: 2rem 0rem;
+  padding: 2rem 1rem;
   font-size: 0.85rem;
   font-weight: 100;
+  text-align: center;
+
+  @media (min-width: $screen-large) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 2rem 0rem;
+  }
 
   & > span:last-of-type {
     border: thin solid $primary;
