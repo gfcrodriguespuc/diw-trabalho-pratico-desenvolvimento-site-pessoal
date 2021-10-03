@@ -1,17 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;900&display=swap");
 
-// Cores
-$black: #212427;
-$primary: #1f2d3d;
-$secondary: #607994;
-$tertiary: #525252;
-
-$color-primary: #1f2d3d;
+// Cores: https://coolors.co/145c9e-58a4b0-a9bcd0-0d1117-ae5596
+$color-primary: #145c9e;
 $color-secondary: #ae5596;
-$color-3: #4dbfd6;
-$color-4: #56b99a;
+$color-3: #58a4b0;
+$color-4: #a9bcd0;
 $color-5: #0d1117;
-$color-black-text: #212427;
+$color-black-text: rgba(0, 0, 0, 0.87); //#212121
 $color-white-text: #ffffff;
 
 // Breakpoints
@@ -34,6 +29,7 @@ html {
 
 body {
   background: #ffffff;
+  color: $color-black-text;
 }
 
 /* Removendo as bordas padrões */
@@ -257,7 +253,6 @@ h6 {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      color: $black;
 
       .profile-section__profile-information h2 {
         font-size: 1.75rem;
@@ -274,7 +269,6 @@ h6 {
         font-size: 1.5rem;
         font-weight: 700;
         margin-bottom: 0.75rem;
-        color: $primary;
       }
 
       .profile-section__social-networks-images {
@@ -322,14 +316,13 @@ h6 {
       h2 {
         font-size: 1.75rem;
         font-weight: 600;
-        color: $primary;
       }
 
       select {
         padding: 0.75rem 2.25rem 0.75rem 1rem;
         font-size: 1.25rem;
         font-weight: 500;
-        color: $primary;
+        color: $color-black-text;
         background-color: transparent;
         background-image: url("images/chevron-down.svg");
         background-position: right 0.5rem center;
@@ -343,7 +336,6 @@ h6 {
         }
 
         option {
-          color: $primary;
           font-weight: 100;
         }
       }
@@ -383,7 +375,6 @@ h6 {
           font-size: 1.25rem;
           font-weight: 700;
           margin-bottom: 0.75rem;
-          color: $primary;
           text-align: center;
         }
       }
@@ -403,7 +394,7 @@ h6 {
 
 /* Secao de experiencia */
 .experience-section {
-  background: $color-4;
+  background: $color-3;
   margin-top: 4rem;
   padding: 4rem 0rem;
 
@@ -421,7 +412,6 @@ h6 {
       h2 {
         font-size: 1.75rem;
         font-weight: 600;
-        color: $primary;
       }
     }
 
@@ -453,7 +443,6 @@ h6 {
           h3 {
             font-size: 1.25rem;
             font-weight: 700;
-            color: $primary;
             text-align: center;
 
             @media (min-width: $screen-small) {
@@ -507,7 +496,6 @@ h6 {
       h2 {
         font-size: 1.75rem;
         font-weight: 600;
-        color: $primary;
       }
     }
 
@@ -531,7 +519,7 @@ h6 {
           justify-content: center;
           align-items: center;
           padding: 1rem;
-          background: #c4c4c4;
+          background: $color-primary;
           border-radius: 50%;
         }
       }
@@ -545,7 +533,6 @@ h6 {
         h3 {
           font-size: 1.55rem;
           font-weight: 600;
-          color: $primary;
         }
 
         & > p:last-child {
@@ -586,7 +573,6 @@ h6 {
       h2 {
         font-size: 1.75rem;
         font-weight: 600;
-        color: $primary;
       }
     }
 
@@ -623,10 +609,6 @@ h6 {
         & > h3 {
           font-size: 1.5rem;
           font-weight: 600;
-          color: $black;
-        }
-
-        & > p {
         }
       }
     }
@@ -645,7 +627,8 @@ h6 {
 
 /* footer */
 .mastfooter {
-  background: #ae5596;
+  background: $color-5;
+  color: $color-white-text;
 
   .mastfooter__content {
     @extend .responsive-section;
@@ -669,7 +652,7 @@ h6 {
     }
 
     & > span:last-of-type {
-      border: thin solid $primary;
+      border: thin solid $color-white-text;
       border-radius: 2px;
       padding: 0.5rem;
     }

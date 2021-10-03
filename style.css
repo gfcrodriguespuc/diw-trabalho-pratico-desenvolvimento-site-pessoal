@@ -13,6 +13,7 @@ html {
 
 body {
   background: #ffffff;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 /* Removendo as bordas padrões */
@@ -47,7 +48,7 @@ h6 {
 .btn {
   appearance: none;
   padding: 0.5rem 0.75rem;
-  background: #1f2d3d;
+  background: #145c9e;
   border-radius: 4px;
   border: none;
   color: white;
@@ -74,7 +75,7 @@ h6 {
 /* Linhas */
 .hr {
   border: none;
-  border-top: thin solid rgba(31, 45, 61, 0.25);
+  border-top: thin solid rgba(20, 92, 158, 0.25);
 }
 
 /* Header e Navbar */
@@ -202,7 +203,7 @@ h6 {
 
 /* Profile Section */
 .profile-section {
-  background: #4dbfd6;
+  background: #58a4b0;
   padding: 4rem 0rem;
 }
 
@@ -226,7 +227,6 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: #212427;
 }
 
 .profile-section .profile-section__content .profile-section__side .profile-section__profile-information h2 {
@@ -244,7 +244,6 @@ h6 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
-  color: #1f2d3d;
 }
 
 .profile-section .profile-section__content .profile-section__side .profile-section__social-networks-images {
@@ -292,14 +291,13 @@ h6 {
 .projects-section .projects-section__content header h2 {
   font-size: 1.75rem;
   font-weight: 600;
-  color: #1f2d3d;
 }
 
 .projects-section .projects-section__content header select {
   padding: 0.75rem 2.25rem 0.75rem 1rem;
   font-size: 1.25rem;
   font-weight: 500;
-  color: #1f2d3d;
+  color: rgba(0, 0, 0, 0.87);
   background-color: transparent;
   background-image: url("images/chevron-down.svg");
   background-position: right 0.5rem center;
@@ -314,7 +312,6 @@ h6 {
 }
 
 .projects-section .projects-section__content header select option {
-  color: #1f2d3d;
   font-weight: 100;
 }
 
@@ -358,7 +355,6 @@ h6 {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
-  color: #1f2d3d;
   text-align: center;
 }
 
@@ -376,7 +372,7 @@ h6 {
 
 /* Secao de experiencia */
 .experience-section {
-  background: #56b99a;
+  background: #58a4b0;
   margin-top: 4rem;
   padding: 4rem 0rem;
 }
@@ -398,7 +394,6 @@ h6 {
 .experience-section .experience-section__content header h2 {
   font-size: 1.75rem;
   font-weight: 600;
-  color: #1f2d3d;
 }
 
 .experience-section .experience-section__content .experience-section__experience-list {
@@ -434,7 +429,6 @@ h6 {
 .experience-section .experience-section__content .experience-section__experience-list .experience-section__experience-card .experience-section__experience-card__side h3 {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #1f2d3d;
   text-align: center;
 }
 
@@ -491,7 +485,6 @@ h6 {
 .github-repositories-section .github-repositories-section__content header h2 {
   font-size: 1.75rem;
   font-weight: 600;
-  color: #1f2d3d;
 }
 
 .github-repositories-section .github-repositories-section__content .github-repositories-section__repositories-list {
@@ -518,7 +511,7 @@ h6 {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  background: #c4c4c4;
+  background: #145c9e;
   border-radius: 50%;
 }
 
@@ -532,7 +525,6 @@ h6 {
 .github-repositories-section .github-repositories-section__content .github-repositories-section__repositories-list .repository-card__text-container h3 {
   font-size: 1.55rem;
   font-weight: 600;
-  color: #1f2d3d;
 }
 
 .github-repositories-section .github-repositories-section__content .github-repositories-section__repositories-list .repository-card__text-container > p:last-child {
@@ -553,7 +545,7 @@ h6 {
 
 /* Seção de recomendações */
 .recommendation-section {
-  background: #56b99a;
+  background: #a9bcd0;
   margin-top: 4rem;
   padding: 4rem 0rem;
 }
@@ -575,7 +567,6 @@ h6 {
 .recommendation-section .recommendation-section__content header h2 {
   font-size: 1.75rem;
   font-weight: 600;
-  color: #1f2d3d;
 }
 
 .recommendation-section .recommendation-section__content .recommendation-section__recommendation-list {
@@ -616,7 +607,6 @@ h6 {
 .recommendation-section .recommendation-section__content .recommendation-section__recommendation-list .recommendation-section__recommendation-card > h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #212427;
 }
 
 .recommendation-section .recommendation-section__content footer {
@@ -633,7 +623,8 @@ h6 {
 
 /* footer */
 .mastfooter {
-  background: #ae5596;
+  background: #0d1117;
+  color: #ffffff;
 }
 
 .mastfooter .mastfooter__content {
@@ -659,7 +650,7 @@ h6 {
 }
 
 .mastfooter .mastfooter__content > span:last-of-type {
-  border: thin solid #1f2d3d;
+  border: thin solid #ffffff;
   border-radius: 2px;
   padding: 0.5rem;
 }
