@@ -25,6 +25,7 @@ $screen-xxlarge: 1400px;
 html {
   box-sizing: border-box;
   font-family: "Public Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -161,15 +162,25 @@ h6 {
           cursor: default;
         }
 
-        @media (hover: hover) and (pointer: fine) {
-          &:hover {
-            /* https://ferie.medium.com/detect-a-touch-device-with-only-css-9f8e30fa1134 */
-            /* mouse, touch pad */
-            color: $color-secondary;
+        a {
+          text-decoration: none;
+
+          &,
+          &:link,
+          &:visited {
+            color: $color-white-text;
           }
 
-          &:hover::before {
-            color: $color-white-text;
+          @media (hover: hover) and (pointer: fine) {
+            &:hover {
+              /* https://ferie.medium.com/detect-a-touch-device-with-only-css-9f8e30fa1134 */
+              /* mouse, touch pad */
+              color: $color-secondary;
+            }
+
+            &:hover::before {
+              color: $color-white-text;
+            }
           }
         }
       }
